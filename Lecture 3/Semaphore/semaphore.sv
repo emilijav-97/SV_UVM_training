@@ -9,14 +9,14 @@ module semaphore_ex;
     join_none
   end
   
-   //Task using "get()"
+  //Task using "get()"
   task event_get (bit id);
      $display("[%0t] Getting a key [%0d]..", $time, id);
      key.get(1);
      $display("[%0t] Key got [%0d]", $time, id);
   endtask
   
-   //Task using "put()"
+  //Task using "put()"
   task event_put (bit id);
      $display("[%0t] Leaving a key [%0d]..", $time, id);
      key.put(1);
