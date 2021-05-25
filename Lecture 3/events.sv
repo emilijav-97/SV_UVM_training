@@ -1,15 +1,15 @@
 module events_ex;
-  event ev_1; 
-  event ev_2 = ev_1;
+   event ev_1; 
+   event ev_2 = ev_1;
   
-  task T1 (event ev);
-    -> ev;
-  endtask
+   task T1 (event ev);
+     -> ev;
+   endtask
   
-  task T2 (event ev_sec);
-    wait(ev_1.triggered);
-    -> ev_sec;
-  endtask
+   task T2 (event ev_sec);
+     wait(ev_1.triggered);
+     -> ev_sec;
+   endtask
   
   
   initial begin
